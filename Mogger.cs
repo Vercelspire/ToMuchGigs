@@ -313,7 +313,7 @@ public class Mogger : MonoBehaviour
         Destroy(gameObject, 5f);
     }
 
-    // Add this to your Mogger script
+
     private void OnTriggerEnter(Collider other)
     {
         // Check if collided object is a child of "Rock"
@@ -359,4 +359,5 @@ public class Mogger : MonoBehaviour
         animator.SetBool("isRunning", false);
         animator.SetTrigger("ultimate");
     }
+
 }
