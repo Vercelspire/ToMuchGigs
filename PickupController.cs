@@ -30,13 +30,17 @@ public class PickupController : MonoBehaviour
 
     private void CheckForPickup()
     {
+        // Cast sphere from lplr's camera forward to detect pickups
         if (Physics.SphereCast(playerCameraTransform.position, pickupRadius, playerCameraTransform.forward, out RaycastHit hit, pickupRange, rockLayerMask))
         {
+            // if sphere hits collider
             if (hit.collider != null)
             {
                 Debug.Log("Press E to pick up a rock!");
+                // if we hold down E
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    // calls pickup rock func
                     PickupRock(hit.collider.gameObject);
                 }
             }
@@ -55,3 +59,4 @@ public class PickupController : MonoBehaviour
         rock.SetActive(false); // Remove rock
     }
 }
+
