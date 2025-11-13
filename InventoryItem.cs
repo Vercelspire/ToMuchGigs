@@ -1,5 +1,7 @@
 using UnityEngine;
 
+// store item info
+
 [System.Serializable]
 public class InventoryItem
 {
@@ -16,3 +18,4 @@ public class InventoryItem
         quantity = qty;
     }
 }
+
