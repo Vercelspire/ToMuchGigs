@@ -149,7 +149,7 @@ public class Mogger : MonoBehaviour
                 AttackPlayer();
                 UpdateAnimator();
                 break;
-
+            // shouldve had animation but ig a bit lazy cuz the game is already hard
             case State.Ultimate:
                 UltimateAttack();
                 UpdateAnimator();
@@ -361,3 +361,4 @@ public class Mogger : MonoBehaviour
     }
 
 }
+
